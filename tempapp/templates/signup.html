@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="{% static 'css/login.css' %}" rel="stylesheet" type="text/css">
+    <!------ Include the above in your HEAD tag ---------->
+
+</head>
+
+<body>
+    <style>
+        body {
+            background: rgb(25, 78, 83);
+            background: linear-gradient(0deg, rgba(25, 78, 83, 1) 0%, rgba(170, 203, 207, 1) 100%);
+        }
+
+        .entry input[type=radio] {
+            margin-right: 0.5em;
+            font-size: 2em;
+        }
+
+        .entry .radio-inline {
+            font-weight: normal;
+        }
+
+        .entry fieldset legend {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+/* 
+        .entry input[type=text] {
+            text-transform: capitalize;
+        } */
+
+        .btn {
+
+            /* font-size: 1.2vw; */
+            background-image: linear-gradient(45deg, #388087, #153538);
+        }
+
+        .btn:hover {
+            color: black;
+            background-image: linear-gradient(45deg, #153538, #388087);
+        }
+    </style>
+    <div class="row m-4">
+        <div class="col-4"></div>
+
+        <div class="entry col-5 mb-5 bg-light">
+
+            <h1 class="alert text-center">
+                <font face="Verdana">Signup</font>
+            </h1>
+
+            <form method="POST" action="{% url 'signup' %}" enctype="multipart/form-data" id="myForm">
+                {% csrf_token %}
+                <div class="mx-4">
+                    <div class="row ">
+                        <label for="" style="font-size: 1vw;">First Name</label>
+                        <input type="text" class="form-control" name="fname" id="fname">
+                    </div>
+                    <div class="row ">
+                        <label for="">Last Name</label>
+                        <input type="text" class="form-control" name="lname" id="lname">
+                    </div>
+                    <div class="row">
+                        <label for="">Email</label>
+                        <input type="email" class="form-control" name="email" id="email-field" >
+                    </div>
+                    <div class="row">
+                        <label for="">Username</label>
+                        <input type="text" class="form-control" name="uname" id="user-field" >
+                    </div>
+                    <div class="row">
+                        <label for="">Password</label>
+                        <input type="password" class="form-control" name="pwd" id="pwd-field" >
+                    </div>
+                </div>
+
+                <div class="text-center mb-5">
+                    <input class="btn rounded-pill w-100 h-50" type="submit" value="Register">
+                </div>
+
+            </form>
+            
+            <div class="text-center pt-3">
+                <span class="txt1 p-b-17">Back to login? </span><br>
+                <a href="{% url 'loginpage' %}" class="txt2">Click Here</a>
+            </div>
+        </div>
+        <div class="col-3"></div>
+
+
+    </div>
+    <div></div>
+
+
+</body>
+
+</html>
