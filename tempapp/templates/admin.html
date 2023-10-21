@@ -1,24 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>admin</title>
     {% load static %}
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
 </head>
+
 <body>
-    <div class="container">
-
+    <style>
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        .card{
+            background: rgba(0, 0, 0, 0.651);
+        }
+    </style>
+    <div class="container p-4">
+<a class="btn btn-primary" href="{% url 'logout' %}">Logout</a>
+        <center>
+            <h1>Admin Dashboard</h1>
+            <h3>Select Theme</h3>
+        </center>
+        <div class="card-deck m-3">
+            <div class="p-4 card text-light">
+                <a href="{% url 'themechange' 'christmas'  %}"><h1>Christmas</h1></a>
+            </div>
+            <div class="p-4 card text-light">
+                <a href="{% url 'themechange' 'onam'  %}"><h1>Onam</h1></a>
+            </div>
+            <div class="p-4 card  text-light">
+                <a href="{% url 'themechange' 'eid'  %}"><h1>Eid</h1></a>
+            </div>
+            <div class="p-4 card   text-light">
+                <a href="{% url 'themechange' 'notheme'  %}"><h1>None</h1></a>
+            </div>
+        </div>
     </div>
-    <center>
-        <h1>Admin Dashboard</h1>
-        <h3>Select Theme</h3>
-    </center>
-    <div class="card-deck m-5">
-        <div class="p-5 card bg-primary text-light"><h1>Theme1</h1></div>
-        <div class="p-5 card bg-danger text-light"><h1>Theme2</h1></div>
-        <div class="p-5 card bg-success text-light"><h1>Theme3</h1></div>
-    </div>
-
 </body>
+
 </html>
