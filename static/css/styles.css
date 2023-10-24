@@ -6,7 +6,7 @@
     font-family: "Poppins",sans-serif;
 }
 body{
-    overflow: hidden; /* Prevent body from scrolling */
+    /* overflow: hidden; */
     position: relative;
 }
 
@@ -118,10 +118,7 @@ header{
 
 body{
     font-family: 'Poppins', sans-serif;
-	font-size: 16px;
-	line-height: 24px;
-	font-weight: 400;
-	color: #212112;
+	
 	/* background: url('https://i.gifer.com/origin/43/43f778b8b7c6989f75f9075e4ea4a063_w200.gif'); */
     /* background-image: url('https://www.shutterstock.com/shutterstock/videos/1093895551/thumb/10.jpg?ip=x480'); */
     /* background: url('{% static "image/bg-top.png" %}'); */
@@ -133,14 +130,11 @@ body{
     
     /* background-repeat: no-repeat; */
 	/* background-size: 7%; */
-	background-color: #ffffffb7;
-	overflow-y: auto;
-    transition: all 200ms linear;
+	
     /* position: sticky; */
     display: flex;
     height: 100%;
-    justify-content: center;
-    align-items: center;
+
 }
 
 /*   
