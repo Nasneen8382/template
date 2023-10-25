@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -15,7 +17,7 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link href="{% static 'css/styles.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'css/onam.css' %}" rel="stylesheet" type="text/css">
-    <!-- <link href="{% static 'css/chris.css' %}" rel="stylesheet" type="text/css"> -->
+    <link href="{% static 'css/chris.css' %}" rel="stylesheet" type="text/css">
 
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -38,6 +40,13 @@
         position: absolute;
         display: inline-block;
         top: 0;
+        left: 0;
+        font-size: 1em;
+    }
+
+    .image-container .image {
+        width: 20vw;
+        left: 0;
     }
 
     /* Style the image within the container */
@@ -154,37 +163,55 @@
         height: 20vh;
     } */
 
-    
+
 
     .second {
-        background-color: #531f1f85;
-        margin: 100px 10px;
+        background-color: #e6e6e6ec;
+        margin: 0 0;
     }
 
-    
+
     /* .cards .card{
         position: relative;
         max-width: 400px;
     } */
-   
 
-    .second .header {
-        color: white;
-    }
 
-    .second .header h2 {
-        font-size: 2rem;
-        font-weight: 600;
-        height: 150px;
-    }
+
 
     .waves {
-        margin: 0px 0px;
-        position: absolute;
+        /* margin: 0px 0px;
         left: 0;
-        height: 500px;
-
+        height: 500px; */
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        background-attachment: fixed;
+        z-index: -1;
+        height: 1000px;
     }
+    .waves svg {
+        position: relative;
+        display: block;
+        width: calc(171% + 1.3px);
+        
+    }
+    .footer{
+      position: absolute;
+      background-color: #531F1F;
+   }
+   .container-footer{
+      position: relative;
+      /* width: 100%; */
+      height: auto;
+      top: 0;
+      left: 0;
+      
+      /* non-critical styles left out */
+   }
 
     .onam {
         margin: 0;
@@ -223,8 +250,8 @@
 
                         <a class="brand" href="">
                             <div class="image-container">
-                                ALTOS TECHNOLOGIES <img class="image img-fluid" src="{% static 'image/chr.png' %}"
-                                    alt="" width="150px">
+                                ALTOS TECHNOLOGIES <img class="image img-fluid"
+                                    src="{% static 'image/Untitled-1.gif' %}" alt="">
 
                             </div>
                         </a>
@@ -280,7 +307,7 @@
 
     <div class="content-wrap my-5">
         <section class="top">
-            <div class="content mx-4 px-2 pt-5 mt-5">
+            <div class="content mx-4 px-2 pt-5 md-mt-5">
                 <h1>We Deal With<br> The Aspects Of</h1>
                 <h2>Professional IT Solutions</h2>
                 <p>Elevate your business with Altos Technologies. As a software development company in India, we craft
@@ -309,136 +336,226 @@
                 </a>
             </div>
         </section>
-        <section class="second" style="padding: 70px 0px;">
-
-            <div class="header text-center mb-5 pb-5">
-                <h1>Why Choose Us</h1>
-                <h2>Discover why ALTOS Technologies is the premier choice for IT solutions</h2>
+        <div class="banner"></div>
+        <section class="second" style="padding: 70px 10px;">
+            <div class="five mb-5">
+                <h1>Why Choose Us
+                    <span>Discover why ALTOS Technologies is the premier choice for IT solutions</span>
+                </h1>
             </div>
-           <!-- Card -->
-           <div class="card-deck mx-2">
-<div class="card">
 
-    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/43.webp" alt="Card image cap">
-      <div class="card-body">
-        <h4 class="card-title"><a>Card title</a></h4>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-        content.</p>
-      <a href="#" class="btn btn-primary">Button</a>
-  
-    </div>
-  
-  </div>
-  <div class="card">
-
-    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/43.webp" alt="Card image cap">
-      <div class="card-body">
-        <h4 class="card-title"><a>Card title</a></h4>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-        content.</p>
-      <a href="#" class="btn btn-primary">Button</a>
-  
-    </div>
-  
-  </div>
-  <div class="card">
-
-    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/43.webp" alt="Card image cap">
-      <div class="card-body">
-        <h4 class="card-title"><a>Card title</a></h4>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-        content.</p>
-      <a href="#" class="btn btn-primary">Button</a>
-  
-    </div>
-  
-  </div>
-  <div class="card">
-
-    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/43.webp" alt="Card image cap">
-      <div class="card-body">
-        <h4 class="card-title"><a>Card title</a></h4>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-        content.</p>
-      <a href="#" class="btn btn-primary">Button</a>
-  
-    </div>
-  
-  </div>
-</div>
-  <!-- Card -->
-            <!-- <div class="card-deck mx-3">
+            <!-- Card -->
+            <div class="card-deck mx-2">
                 <div class="card">
+                    <div class="card-head">
+                        <div class="card-img-top">
+                            <h1><i class="bx bx-receipt"></i></h1>
+                        </div>
 
-                    <div class="card-title">
-                        <i class="bx bx-receipt" style="color: #ffffff"></i>
                     </div>
 
-
-                    <div class="card-body text-center">
-                        <h4>Experienced Professionals</h4>
-                        <p>Our Team of Experienced Professionals is Committed to Delivering Dependable Services to Meet
+                    <div class="card-body">
+                        <h4 class="card-title"><a>Experienced Professional</a></h4>
+                        <p class="card-text">Our Team of Experienced Professionals is Committed to Delivering Dependable
+                            Services to Meet
                             the Needs of Our Clients.</p>
                     </div>
+
                 </div>
                 <div class="card">
 
-                    <div class="card-title">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512">
-                            <title>Layers</title>
-                            <path fill="#FFFF"
-                                d="M434.8 137.65l-149.36-68.1c-16.19-7.4-42.69-7.4-58.88 0L77.3 137.65c-17.6 8-17.6 21.09 0 29.09l148 67.5c16.89 7.7 44.69 7.7 61.58 0l148-67.5c17.52-8 17.52-21.1-.08-29.09zM160 308.52l-82.7 37.11c-17.6 8-17.6 21.1 0 29.1l148 67.5c16.89 7.69 44.69 7.69 61.58 0l148-67.5c17.6-8 17.6-21.1 0-29.1l-79.94-38.47"
-                                stroke-linecap="round" stroke-linejoin="round"
-                                class="ionicon-fill-none ionicon-stroke-width"></path>
-                            <path fill="#FFFF"
-                                d="M160 204.48l-82.8 37.16c-17.6 8-17.6 21.1 0 29.1l148 67.49c16.89 7.7 44.69 7.7 61.58 0l148-67.49c17.7-8 17.7-21.1.1-29.1L352 204.48"
-                                stroke-linecap="round" stroke-linejoin="round"
-                                class="ionicon-fill-none ionicon-stroke-width"></path>
-                        </svg></i>
-
+                    <div class="card-head">
+                        <div class="card-img-top">
+                            <h1><i class="fas fa-layer-group    "></i></h1>
+                        </div>
 
                     </div>
-                    <div class="card-body text-center">
-                        <h4>Unique Designs</h4>
-                        <p> Discover a World of Unparalleled Creativity - Our Unique Designs are the Epitome of
+                    <div class="card-body">
+                        <h4 class="card-title"><a>Unique Design</a></h4>
+                        <p class="card-text"> Discover a World of Unparalleled Creativity - Our Unique Designs are the
+                            Epitome of
                             Innovation and Originality.</p>
                     </div>
+
                 </div>
-
                 <div class="card">
+                    <div class="card-head">
+                        <div class="card-img-top">
+                            <h1><i class="bx bx-cube-alt" aria-hidden="true"></i></h1>
+                        </div>
 
-                    <div class="card-title">
-                        <i class="bx bx-cube-alt" style="color: #ffffff"></i>
                     </div>
-
-
-                    <div class="card-body text-center">
-                        <h4>Industrial standards</h4>
-                        <p>Our websites are engineered to adhere to international standards, placing them at the
+                    <div class="card-body">
+                        <h4 class="card-title"><a>Industrial Standards</a></h4>
+                        <p class="card-text">Our websites are engineered to adhere to international standards, placing
+                            them at the
                             forefront of the global market.</p>
+
+
                     </div>
+
                 </div>
                 <div class="card">
+                    <div class="card-head">
+                        <div class="card-img-top">
+                            <h1><i class="bx bx-user" aria-hidden="true"></i></h1>
+                        </div>
 
-                    <div class="card-title">
-                        <i class="bx bx-user" style="color: #ffffff"></i>
                     </div>
-
-
-                    <div class="card-body text-center">
-                        <h4>Customized Services</h4>
-                        <p>Tailored Solutions Just for You - Our Customized Services Offer Personalized Expertise to
+                    <div class="card-body">
+                        <h4 class="card-title"><a>Customized Service</a></h4>
+                        <p class="card-text">Tailored Solutions Just for You - Our Customized Services Offer
+                            Personalized Expertise to
                             Meet Your Unique Needs.</p>
                     </div>
+
                 </div>
-            </div> -->
+            </div>
+
 
         </section>
-        <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#531F1F" fill-opacity="1"
-                d="M0,128L17.1,138.7C34.3,149,69,171,103,149.3C137.1,128,171,64,206,32C240,0,274,0,309,10.7C342.9,21,377,43,411,74.7C445.7,107,480,149,514,165.3C548.6,181,583,171,617,170.7C651.4,171,686,181,720,176C754.3,171,789,149,823,122.7C857.1,96,891,64,926,69.3C960,75,994,117,1029,112C1062.9,107,1097,53,1131,58.7C1165.7,64,1200,128,1234,176C1268.6,224,1303,256,1337,266.7C1371.4,277,1406,267,1423,261.3L1440,256L1440,320L1422.9,320C1405.7,320,1371,320,1337,320C1302.9,320,1269,320,1234,320C1200,320,1166,320,1131,320C1097.1,320,1063,320,1029,320C994.3,320,960,320,926,320C891.4,320,857,320,823,320C788.6,320,754,320,720,320C685.7,320,651,320,617,320C582.9,320,549,320,514,320C480,320,446,320,411,320C377.1,320,343,320,309,320C274.3,320,240,320,206,320C171.4,320,137,320,103,320C68.6,320,34,320,17,320L0,320Z">
-            </path>
-        </svg>
+        <section class="contact">
+            <div class="five my-5">
+                <h1>Contact Us <span>Connect with us</span></h1>
+            </div>
+            <!-- <svg id="visual" viewBox="0 0 900 450" width="900" height="450" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+                <g transform="translate(514.053280992917 205.93054105884664)">
+                    <path
+                        d="M116.6 -160.7C152.9 -134.2 185.4 -102.5 197.8 -64.3C210.2 -26.1 202.6 18.6 198.8 75.2C195 131.8 195.1 200.2 162.6 226.3C130.1 252.4 65 236.2 5 229.3C-55.1 222.4 -110.1 224.9 -160.7 204.7C-211.2 184.4 -257.3 141.5 -292.2 83.3C-327.1 25.2 -350.8 -48.3 -314.7 -84.6C-278.6 -120.9 -182.7 -120.2 -120.3 -138.3C-57.9 -156.3 -28.9 -193.2 5.6 -200.9C40.2 -208.6 80.3 -187.2 116.6 -160.7"
+                        fill="#531F1F">
+
+                    </path>
+                </g>
+            </svg>  style="background-image: url( static/image/contact.png ); background-repeat: no-repeat;">-->
+           
+                <div class="contactform row">
+                    <div class="col-12">
+                        <div class="wow fadeInUp" data-wow-delay="0.3s">
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                            <label for="name">Your Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                            <label for="email">Your Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                            <label for="subject">Subject</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px"></textarea>
+                                            <label for="message">Message</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    
+                </div>
+            
+        </section>
+
+
+        <div class="container-fluid  text-light footer mt-5 pt-5 wow fadeIn" >
+            <div class="container-footer py-5 px-lg-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="text-white mb-4">Get In Touch</h5>
+                        <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                        <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                        <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="text-white mb-4">Popular Link</h5>
+                        <a class="btn btn-link" href="">About Us</a>
+                        <a class="btn btn-link" href="">Contact Us</a>
+                        <a class="btn btn-link" href="">Privacy Policy</a>
+                        <a class="btn btn-link" href="">Terms & Condition</a>
+                        <a class="btn btn-link" href="">Career</a>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="text-white mb-4">Project Gallery</h5>
+                        <div class="row g-2">
+                            <div class="col-4">
+                                <img class="img-fluid" src="img/portfolio-1.jpg" alt="Image">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid" src="img/portfolio-2.jpg" alt="Image">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid" src="img/portfolio-3.jpg" alt="Image">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid" src="img/portfolio-4.jpg" alt="Image">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid" src="img/portfolio-5.jpg" alt="Image">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid" src="img/portfolio-6.jpg" alt="Image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="text-white mb-4">Newsletter</h5>
+                        <p>Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulpu</p>
+                        <div class="position-relative w-100 mt-3">
+                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Your Email" style="height: 48px;">
+                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-primary fs-4"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container px-lg-5">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved. 
+							
+							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+							Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="">Home</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#531F1F" fill-opacity="1"
+                    d="M0,128L17.1,138.7C34.3,149,69,171,103,149.3C137.1,128,171,64,206,32C240,0,274,0,309,10.7C342.9,21,377,43,411,74.7C445.7,107,480,149,514,165.3C548.6,181,583,171,617,170.7C651.4,171,686,181,720,176C754.3,171,789,149,823,122.7C857.1,96,891,64,926,69.3C960,75,994,117,1029,112C1062.9,107,1097,53,1131,58.7C1165.7,64,1200,128,1234,176C1268.6,224,1303,256,1337,266.7C1371.4,277,1406,267,1423,261.3L1440,256L1440,320L1422.9,320C1405.7,320,1371,320,1337,320C1302.9,320,1269,320,1234,320C1200,320,1166,320,1131,320C1097.1,320,1063,320,1029,320C994.3,320,960,320,926,320C891.4,320,857,320,823,320C788.6,320,754,320,720,320C685.7,320,651,320,617,320C582.9,320,549,320,514,320C480,320,446,320,411,320C377.1,320,343,320,309,320C274.3,320,240,320,206,320C171.4,320,137,320,103,320C68.6,320,34,320,17,320L0,320Z">
+                </path>
+            </svg>
+        </div>
+        
     </div>
 
 
@@ -530,7 +647,8 @@
 
                         <a class="brand" href="">
                             <div class="image-container">
-                                ALTOS TECHNOLOGIES <img class="image img-fluid" src="{% static 'image/on.png' %}" alt="" width="50px">
+                                ALTOS TECHNOLOGIES <img class="image img-fluid" src="{% static 'image/on.png' %}" alt=""
+                                    width="50px">
 
                             </div>
                         </a>
@@ -648,7 +766,8 @@
                             <div class="card-body">
                                 <small class="card-meta mb-2">Unique Designs</small>
                                 <h5 class="card-title mt-0 "><a class="text-dark"
-                                        herf="https://creativemanner.com">Discover a World of Unparalleled Creativity - Our Unique Designs are the Epitome of Innovation and Originality.</a></h5>
+                                        herf="https://creativemanner.com">Discover a World of Unparalleled Creativity -
+                                        Our Unique Designs are the Epitome of Innovation and Originality.</a></h5>
                             </div>
                             <div class="card-footer">
                                 <div class="media">
@@ -672,8 +791,9 @@
                         <div class="card-img-overlay d-flex flex-column">
                             <div class="card-body">
                                 <small class="card-meta mb-2">Industrial standards</small>
-                                <h5 class="card-title mt-0 "><a class="text-dark"
-                                        herf="https://creativemanner.com">Our websites are engineered to adhere to international standards, placing them at the forefront of the global market.</a></h5>
+                                <h5 class="card-title mt-0 "><a class="text-dark" herf="https://creativemanner.com">Our
+                                        websites are engineered to adhere to international standards, placing them at
+                                        the forefront of the global market.</a></h5>
                             </div>
                             <div class="card-footer">
                                 <div class="media">
@@ -699,8 +819,10 @@
                             <div class="card-body">
                                 <small class="card-meta mb-2">Customized Services</small>
                                 <h5 class="card-title mt-0 "><a class="text-dark"
-                                        herf="https://creativemanner.com">Tailored Solutions Just for You - Our Customized Services Offer Personalized Expertise to Meet Your Unique Needs.</a></h5>
-                                
+                                        herf="https://creativemanner.com">Tailored Solutions Just for You - Our
+                                        Customized Services Offer Personalized Expertise to Meet Your Unique Needs.</a>
+                                </h5>
+
                             </div>
                             <div class="card-footer">
                                 <div class="media">
@@ -716,11 +838,12 @@
                         </div>
                     </div>
                 </div>
-                
+
 
             </div>
 
         </section>
+      
     </div>
 
 </body>
