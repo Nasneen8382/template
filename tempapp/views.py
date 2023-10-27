@@ -31,7 +31,8 @@ def login(request):
 
 
 def admin(request):
-    return render(request,'admin.html')
+    thm = Theme.objects.get(status='active')
+    return render(request,'admin.html',{'theme':thm})
 def index(request):
     thm = Theme.objects.get(status='active')
     return render(request,'index2.html',{'theme':thm})

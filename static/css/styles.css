@@ -174,12 +174,26 @@ body{
 }
 .start-header.scroll-on {
 	/* box-shadow: 0 5px 10px 0 rgba(138, 155, 165, 0.15); */
-    background-color: #531F1F;
+    background-color: #531f1fd0;
 	padding: 10px 0;
 	-webkit-transition : all 0.3s ease-out;
 	transition : all 0.3s ease-out;
+    height: 70px;
 }
 .start-header.scroll-on .navbar-brand img{
+	height: 20px;
+	-webkit-transition : all 0.3s ease-out;
+	transition : all 0.3s ease-out;
+}
+.start-header.scroll {
+	/* box-shadow: 0 5px 10px 0 rgba(138, 155, 165, 0.15); */
+    background-color: #000000bd;
+	padding: 10px 0;
+	-webkit-transition : all 0.3s ease-out;
+	transition : all 0.3s ease-out;
+    height: 70px;
+}
+.start-header.scroll .navbar-brand img{
 	height: 20px;
 	-webkit-transition : all 0.3s ease-out;
 	transition : all 0.3s ease-out;
@@ -195,7 +209,6 @@ body{
      /* background-color: #2121123a; */
 }
 .navbar{
-   
 	padding: 0;
 }
 .navbar-brand img{

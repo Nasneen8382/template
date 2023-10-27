@@ -25,18 +25,34 @@
             <h3>Select Theme</h3>
         </center>
         <div class="card-deck m-3">
+            {% if theme.name == 'christmas' %}
+            <div class="p-4 card text-light bg-danger">
+                <a href="{% url 'themechange' 'christmas'  %}"><h1>Christmas</h1></a>
+            </div>
+            {% else %}
             <div class="p-4 card text-light">
                 <a href="{% url 'themechange' 'christmas'  %}"><h1>Christmas</h1></a>
             </div>
+            {% endif %}
+            {% if theme.name == 'onam' %}
+            <div class="p-4 card text-light bg-danger">
+                <a href="{% url 'themechange' 'onam'  %}"><h1>Onam</h1></a>
+            </div>
+            {% else %}
             <div class="p-4 card text-light">
                 <a href="{% url 'themechange' 'onam'  %}"><h1>Onam</h1></a>
             </div>
-            <div class="p-4 card  text-light">
+            {% endif %}
+            {% if theme.name == 'eid' %}
+            <div class="p-4 card text-light bg-danger">
                 <a href="{% url 'themechange' 'eid'  %}"><h1>Eid</h1></a>
             </div>
-            <div class="p-4 card   text-light">
-                <a href="{% url 'themechange' 'notheme'  %}"><h1>None</h1></a>
+            {% else %}
+            <div class="p-4 card text-light">
+                <a href="{% url 'themechange' 'eid'  %}"><h1>Eid</h1></a>
             </div>
+            {% endif %}
+            
         </div>
     </div>
 </body>

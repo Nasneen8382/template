@@ -113,8 +113,8 @@
 
 .hero-anime .banner {
     margin-top: 20vh;
-    height: 30vh;
-    width: 100vw;
+    height: 35vh;
+    width: 100%;
     background-image: url('https://www.wordsjustforyou.com/wp-content/uploads/2021/11/Merry-Christmas-Gif-for-Email-Signature_wordsjustforyou_02281121.gif');
     background-repeat: no-repeat;
     /* background-attachment: fixed; */
@@ -135,14 +135,14 @@
 }
 
 /* Style the image within the container */
-.hero-anime .image {
+/* .hero-anime .image {
     z-index: -2;
     display: block;
     top: 30px;
     left: 0;
     position: fixed;
     display: flex;
-}
+} */
 
 .hero-anime .contact {
     justify-content: center;
@@ -152,24 +152,46 @@
     /* height: 90vh; */
     position: relative;
     margin-bottom: 25vw;
+    /* background: url('https://i.pinimg.com/1200x/42/71/5c/42715c20bde912746f0d37449c700b1d.jpg');
+background-repeat: no-repeat;
+background-size: 100%; */
+    /* background: url(''); */
     
 }
 
 .hero-anime .contact .contactform {
+    
+    background-color: #f0f0f0;
+    /* background-image:
+    linear-gradient(0deg,
+        pink 0%,
+        rgba(255, 255, 255, 0.849)0%), url('https://i.pinimg.com/1200x/42/71/5c/42715c20bde912746f0d37449c700b1d.jpg'); */
+
+        background: url('https://i.pinimg.com/1200x/42/71/5c/42715c20bde912746f0d37449c700b1d.jpg');
+    border-radius: 1rem;
     position: relative;
     height: 500px;
     left: 15%;
     /* background-color: #531f1f8a; */
     margin: 1rem 5rem;
     padding: 3rem;
-    display: block;
+    display: flex;
     width: 60vw;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 
 
 }
-.hero-anime .contact .contactform .right{
-    background-color: white;
-    
-    margin-right: 0;
+.hero-anime .btn-msg{
+    background-color: #531F1F;
+    color: aliceblue;
+    border-radius: 2rem;
 }
+.hero-anime .btn-msg:hover{
+    background-color: #531f1f56;
+    color: rgb(0, 0, 0);
+}
+.hero-anime .form-control{
+    background-color: rgba(255, 255, 255, 0.541);
+    border: #531F1F solid 2px;
+}
+
