@@ -62,8 +62,8 @@
 
   .card-title {
     font-weight: 800;
-    font-size: 1.7vw;
-    line-height: 4.5vh;
+    font-size: 3vh;
+    line-height: 5vh;
     text-align: justify;
     
   }
@@ -73,7 +73,7 @@
     text-transform: uppercase;
     font-weight: 500;
     letter-spacing: 2px;
-    font-size: 1.2vw;
+    font-size: 2.5vh;
   }
 
   .card-body {
@@ -103,7 +103,7 @@
 @media (max-width: 767px) {}
 
 
-.onam .banner {
+.banner {
  
   width: 100%;
   /* height: ; */
@@ -111,49 +111,42 @@
   
 }
 
-
-.onam .twelve{
-  margin: 2.5rem;
-}
-.onam .twelve h1 {
-/*  
- 
- 
-  font-family: "Raleway", sans-serif;
-  font-weight: 600;
-  color: #ffff;
-  font-size: 2.5rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  text-align: center;
-  
-  white-space: nowrap;
-  padding-bottom: 20px; */
-  position: relative;
-  /* margin: auto; */
-  /* text-align: center; */
-  font-size:3vw; 
-  font-weight:300; 
-  color:#ffffff; 
-  letter-spacing:1px;
-  text-transform: uppercase;
-
-  display: grid;
-  grid-template-columns: 10fr max-content 10fr;
-  grid-template-rows: 1em 0;
-  grid-gap: 1rem;
+.onam .twelve {
+  /* display: flex; */
+  justify-content: center;
   align-items: center;
-  
+  margin: 3rem auto;
 }
 
-.onam .twelve h1:before ,.onam .twelve h1:after {
-  content: " ";
-  display: block;
-  border-bottom: 1px solid #c5b100;
-  border-top: 1px solid #c5b100;
-  height: 1vh;
-background-color:#c5b100;
+.onam .twelve h1 {
+  position: relative;
+  font-size: 3vw;
+  font-weight: 300;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.onam .twelve h1::before,
+.onam .twelve h1::after {
+  content: "";
+  width: 40px; /* Adjust the width of your image */
+  height: 40px; /* Adjust the height of your image */
+  background-size: contain; /* Ensure the image fits within the element */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+
+.onam .twelve h1::before {
+  background-image: url('https://img.pikbest.com/origin/09/19/42/07upIkbEsTSRs.png!sw800'); /* Add your path to the left image */
+  margin-right: 10px; /* Adjust the spacing */
+}
+
+.onam .twelve h1::after {
+  background-image: url('https://img.pikbest.com/origin/09/19/42/07upIkbEsTSRs.png!sw800'); /* Add your path to the right image */
+  margin-left: 10px; /* Adjust the spacing */
 }
 /* 
 .onam .twelve h1:after {
@@ -170,8 +163,7 @@ background-color:#c5b100;
 .onam .twelve p {
   display: block;
   /* font-size: 0.5em; */
-  line-height: 1;
-  margin-top: 30px;
+  
   font-size: 1.2vw;
   font-weight: normal;
   text-transform: uppercase;
@@ -230,8 +222,8 @@ background-color:#c5b100;
 }
 
 .onam .alt-send-button {
-  /* width: 350px; */
-  height: 34px;
+  /* width: 25vw; */
+    height: 34px;
   transition: all .2s ease-in-out;
 }
 

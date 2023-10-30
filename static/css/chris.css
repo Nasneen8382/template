@@ -55,6 +55,7 @@
     margin: 0 1rem;
     display: block;
     position: relative;
+    font-size: 3vh;
 }
 
 .hero-anime .card .card-body .card-text {
@@ -101,7 +102,7 @@
 .hero-anime  .five h1:before {
     position: absolute;
     left: 0;
-    bottom: 38px;
+    bottom: 47px;
     width: 80px;
     height: 4px;
     content: "";
@@ -109,30 +110,43 @@
     margin-left: -30px;
     background-color: #000000;
 }
+.hero-anime .five h1 {
+    position: relative;
+    margin: 5rem auto;
+  }
+ 
+  .hero-anime .one  h1::after {
+    top: -85%;
+    left: 48%;
+  }
+  .hero-anime .two  h1::after {
+    top: -85%;
+    left: 46%;
+  }
 
+  .hero-anime .five h1::after {
+    content: "";
+    position: absolute;
+    
+    align-items: center;
+    justify-content: center;
+    
+    width: 80px; /* Set the width of your image */
+    height: 80px; /* Set the height of your image */
+    background-image: url('https://freepngimg.com/thumb/santa_claus/13-2-santa-claus-png-hd-thumb.png'); /* Replace with your image path */
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 
-.hero-anime .banner {
+/* .hero-anime .banner {
     margin-top: 20vh;
     height: 35vh;
     width: 100%;
     background-image: url('https://www.wordsjustforyou.com/wp-content/uploads/2021/11/Merry-Christmas-Gif-for-Email-Signature_wordsjustforyou_02281121.gif');
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
     background-size: 100%;
-}
+} */
 
-.hero-anime .image-container {
-    position: absolute;
-    display: inline-block;
-    top: 0;
-    left: 0;
-    font-size: 1em;
-}
-
-.hero-anime .image-container .image {
-    width: 20vw;
-    left: 0;
-}
 
 /* Style the image within the container */
 /* .hero-anime .image {
@@ -169,11 +183,11 @@ background-size: 100%; */
 
         background: url('https://i.pinimg.com/1200x/42/71/5c/42715c20bde912746f0d37449c700b1d.jpg');
     border-radius: 1rem;
-    position: relative;
+    /* position: relative; */
     height: 500px;
-    left: 15%;
+    /* left: 15%; */
     /* background-color: #531f1f8a; */
-    margin: 1rem 5rem;
+    margin: 1rem auto;
     padding: 3rem;
     display: flex;
     width: 60vw;
@@ -185,13 +199,28 @@ background-size: 100%; */
     background-color: #531F1F;
     color: aliceblue;
     border-radius: 2rem;
+    height: 9vh;
 }
 .hero-anime .btn-msg:hover{
     background-color: #531f1f56;
     color: rgb(0, 0, 0);
 }
+.wow{
+    margin: -0.5rem 0;
+}
 .hero-anime .form-control{
     background-color: rgba(255, 255, 255, 0.541);
     border: #531F1F solid 2px;
 }
+
+
+
+.hero-anime .content-wrap {
+    max-width: 100%;
+    /* padding: 20px; */
+    box-sizing: border-box;
+    /* margin: 0 auto; */
+    overflow: hidden;
+    /* background: #f5f5f5; Change the background color as needed */
+  }
 
