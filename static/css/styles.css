@@ -191,7 +191,7 @@ body{
 	padding: 10px 0;
 	-webkit-transition : all 0.3s ease-out;
 	transition : all 0.3s ease-out;
-    height: 70px;
+    height: 100px;
 }
 .start-header.scroll .navbar-brand img{
 	height: 20px;

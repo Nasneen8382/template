@@ -176,18 +176,11 @@ background-size: 100%; */
 .hero-anime .contact .contactform {
     
     background-color: #f0f0f0;
-    /* background-image:
-    linear-gradient(0deg,
-        pink 0%,
-        rgba(255, 255, 255, 0.849)0%), url('https://i.pinimg.com/1200x/42/71/5c/42715c20bde912746f0d37449c700b1d.jpg'); */
-
-        background: url('https://i.pinimg.com/1200x/42/71/5c/42715c20bde912746f0d37449c700b1d.jpg');
+    background: url('https://i.pinimg.com/1200x/42/71/5c/42715c20bde912746f0d37449c700b1d.jpg');
     border-radius: 1rem;
     /* position: relative; */
     height: 500px;
-    /* left: 15%; */
-    /* background-color: #531f1f8a; */
-    margin: 1rem auto;
+    margin: 4rem auto;
     padding: 3rem;
     display: flex;
     width: 60vw;
@@ -224,3 +217,10 @@ background-size: 100%; */
     /* background: #f5f5f5; Change the background color as needed */
   }
 
+  .hero-anime .about{
+    font-family: 'Droid Sans', sans-serif;
+    color: #000000;
+  }
+  .hero-anime .about p{
+    line-height: 5vh;
+  }

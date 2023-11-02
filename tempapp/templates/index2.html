@@ -6,6 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
         integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
@@ -89,6 +94,7 @@
 
     .custom-shape-divider-top-1697730332 .shape-fill {
         fill: #531F1F;
+        /* #531F1F; */
     }
 
     .hero-anime .top {
@@ -105,16 +111,13 @@
     }
 
     .onam .top {
-        width: 100%;
-        /* height: 100%; */
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 5em auto;
+        /* margin: 50px 50px; */
         color: #ffffff;
         /* height: 80vh; */
-        /* padding: 50px 50px; */
-        /* background-color: rgba(0, 0, 0, 0.425); */
+        padding: 50px 50px;
     }
 
 
@@ -129,28 +132,18 @@
 
     }
 
-    .content h1{
+    .content h1 {
         font-size: 8vh;
         font-weight: 600;
     }
 
-    .hero-anime .carousel-inner {
+    .onam .carousel-inner ,.hero-anime .carousel-inner {
         /* width: 30vw; */
         border-radius: 1.5rem;
         box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     }
 
-    .onam .carousel-inner {
-        border-radius: 1.2rem;
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    }
-
-    .onam .carousel-inner .carousel-item {
-        /* height: 70vh; */
-        width: 90vw;
-        border-radius: 20px;
-        background-color: rgba(0, 0, 0, 0.384);
-    }
+    
 
 
     /* .onam .carousel-inner .carousel-item .carousel-txt h1 {
@@ -176,6 +169,47 @@
         margin: 0 0;
     }
 
+    .hero-anime::before ,.hero-anime::after {
+    content: "";
+    position: absolute;
+    width: 500px; /* Adjust as needed */
+    height: 40vh; /* Adjust as needed */
+    
+     /* Place it behind the body content */
+    animation: star 3s infinite;
+    opacity: 1;
+
+}
+.hero-anime::before {
+    top: 0;
+    left: -50px;
+    background-image: url('https://www.freeiconspng.com/thumbs/stars-png/repin-image-stars-png-transparent-stars-on-pinterest-0.png'); /* Add your image under content */
+    background-repeat: no-repeat;
+    background-size: 50vw;
+    z-index: 0;
+}
+.hero-anime::after {
+    top: 0;
+    right: 0;
+    background-image: url('https://www.freeiconspng.com/thumbs/stars-png/repin-image-stars-png-transparent-stars-on-pinterest-0.png'); /* Add your image under content */
+    background-repeat: no-repeat;
+    background-size: 50vw;
+    z-index: -1;
+}
+@keyframes star {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+
+    }
+ 
 
     /* .cards .card{
         position: relative;
@@ -219,6 +253,49 @@
         /* background: url("") no-repeat left top, linear-gradient(#ebc001e8, #000000); */
     }
 
+    .onam::before,
+    .onam::after {
+        content: "";
+        position: fixed;
+        width: 30vw;
+        /* Adjust the width of your image */
+        height: 30vw;
+        /* Adjust the height of your image */
+        background-size: cover;
+        animation: animName 10s linear infinite;
+        z-index: -1;
+
+    }
+
+    @keyframes animName {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .onam::before {
+        top: 50%;
+        left: 10px;
+        background-image:
+            url('https://img.pikbest.com/origin/09/19/42/07upIkbEsTSRs.png!sw800');
+        opacity: 0.3
+            /* Add your path to the left image */
+    }
+
+    .onam::after {
+        top: 0;
+        right: 0;
+        background-image:
+            url('https://img.pikbest.com/origin/09/19/42/07upIkbEsTSRs.png!sw800');
+        opacity: 0.3;
+        
+    }
+
+
     .sec2 {
         padding: 40px;
         background-color: rgb(0, 0, 0);
@@ -226,7 +303,6 @@
         width: 103.5%;
         /* position: relative; */
     }
-
 
     .celebration {
         position: fixed;
@@ -236,6 +312,60 @@
         /* Adjust the margin as needed to control the distance from the top-right corner */
         z-index: 9999;
         /* Adjust the z-index if needed to control the stacking order */
+    }
+
+    .onam .celebration {
+
+        margin: 20px;
+        /* Adjust the margin as needed to control the distance from the top-right corner */
+        z-index: 9999;
+        /* Adjust the z-index if needed to control the stacking order */
+        position: fixed;
+        animation-name: example;
+        animation-duration: 7s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes example {
+        0% {
+            left: 50%;
+            top: 0%;
+        }
+
+        100% {
+            left: 0%;
+            top: 0%;
+        }
+
+    }
+   
+
+    .hero-anime .anim {
+        height: 20px;
+        top: 0px;
+        right: -30px;
+        margin: 20px;
+        /* Adjust the margin as needed to control the distance from the top-right corner */
+        z-index: 9999;
+        /* Adjust the z-index if needed to control the stacking order */
+        position: relative;
+        animation-name: anima;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes anima {
+        0% {
+            
+            left: -10%;
+            top: 0%;
+        }
+
+        100% {
+            left: 100%;
+            top: 0%;
+        }
+
     }
 </style>
 {% if theme.name == 'christmas' %}
@@ -270,14 +400,14 @@
 
                                 </li>
                                 <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                    <a class="nav-link" href="#">Explore</a>
+                                    <a class="nav-link" href="#second">Explore</a>
                                 </li>
                                 <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                    <a class="nav-link" href="#">About</a>
+                                    <a class="nav-link" href="#abt">About</a>
                                 </li>
 
                                 <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                    <a class="nav-link" href="#">Contact</a>
+                                    <a class="nav-link" href="#contact">Contact</a>
                                 </li>
                                 <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                                     <a class="nav-link" href="{% url 'logout' %}"><i class="fa fa-sign-out"
@@ -293,61 +423,114 @@
     </div>
     <div class="celebration"><img class="image img-fluid" src="{% static 'image/santa.gif' %}" alt="" width="250px">
     </div>
+    
     <div class="custom-shape-divider-top-1697730332">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <defs>
+                <pattern id="img1" patternUnits="userSpaceOnUse" width="100" height="100">
+                  <image href="https://img.freepik.com/premium-vector/christmas-balls-background-with-festive-flakes-stars-ornaments_105325-885.jpg" x="0" y="0" width="100" height="100" />
+                </pattern>
+              </defs>
             <path
                 d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
-                opacity=".79" class="shape-fill"></path>
+                opacity=".79" class="#img1"></path>
             <path
                 d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
-                opacity=".5" class="shape-fill"></path>
+                opacity=".5" class="#img1"></path>
             <path
                 d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
-                class="shape-fill"></path>
+                class="#img1"></path>
         </svg>
     </div>
+
+   
+    
 
     <div class="content-wrap my-5">
         <section class="top">
             <div class="row">
-            <div class="col-lg-6 col-md-12 col-sm-12">
-                <div class="content ">
-                <h1>We Deal With<br> The Aspects Of</h1>
-                <h2>Professional IT Solutions</h2>
-                <p>Elevate your business with Altos Technologies. As a software development company in India, we craft
-                    custom websites and software solutions to fit your unique business needs.</p>
-            </div></div>
-            <div class=" col-lg-6 col-md-12 col-sm-12">
-            <div id="carouselExampleControls" class="carousel slide " data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-
-                        <img class="d-block w-100 img-fluid" src="{% static 'image/team-1.jpg' %}" alt="First slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100 img-fluid" src="{% static 'image/team-2.jpg' %}" alt="Second slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100 img-fluid" src="{% static 'image/team-3.jpg' %}" alt="Third slide">
+                <div class="col-lg-6 col-md-12 col-sm-12"  data-aos="fade-right" data-aos-duration="2000">
+                    <div class="content ">
+                        <h1>We Deal With<br> The Aspects Of</h1>
+                        <h2>Professional IT Solutions</h2>
+                        <p>Elevate your business with Altos Technologies. As a software development company in India, we
+                            craft
+                            custom websites and software solutions to fit your unique business needs.</p>
                     </div>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+                <div class=" col-lg-6 col-md-12 col-sm-12"  data-aos="fade-left" data-aos-duration="2000">
+                    <div id="carouselExampleControls" class="carousel slide " data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+
+                                <img class="d-block w-100 img-fluid" src="{% static 'image/team-1.jpg' %}"
+                                    alt="First slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100 img-fluid" src="{% static 'image/team-2.jpg' %}"
+                                    alt="Second slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100 img-fluid" src="{% static 'image/team-3.jpg' %}"
+                                    alt="Third slide">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
+                            data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button"
+                            data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
         </section>
         <div class="banner">
-            <img class="img-fluid w-100" src="https://www.wordsjustforyou.com/wp-content/uploads/2021/11/Merry-Christmas-Gif-for-Email-Signature_wordsjustforyou_02281121.gif" alt="">
+            <img class="img-fluid w-100"
+                src="https://www.wordsjustforyou.com/wp-content/uploads/2021/11/Merry-Christmas-Gif-for-Email-Signature_wordsjustforyou_02281121.gif"
+                alt="">
         </div>
-        <section class="second" style="padding: 70px 10px;">
-            <div class="five one my-5">
+        <section class="about" id="abt" style="padding: 2rem 6rem;">
+            
+            <div class="five one my-5" data-aos="zoom-in" data-aos-duration="2000">
+                <h1>About Us
+                    <span>Some Of The Reason For Choosing Our IT Solutions</span>
+                </h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12" data-aos="fade-right" data-aos-duration="2000">
+                    <p>As a leading web development company in Kochi, ALTOS Technologies provides top-notch consulting
+                        and strategy services to enhance the digital transformation of enterprises of all sizes, both
+                        internally and in terms of customer experience.</p>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12"></div>
+                <div class="col-lg-6 col-md-12 col-sm-12 text-right" data-aos="fade-left" data-aos-duration="2000">
+                    <p>Our expertise lies in website and software development, where we have gained extensive experience
+                        by delivering a wide range of projects, including websites, web applications, mobile
+                        applications, 3D modeling services, and digital marketing services, to clients across different
+                        industries and of varying sizes.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12" data-aos="fade-right" data-aos-duration="2000">
+                    <p>At ALTOS Technologies, we understand the critical role that user experience plays in the success
+                        of your website or software. That's why we put a strong emphasis on designing and developing
+                        products that are user-friendly, intuitive, and enjoyable to use, ensuring your customers or
+                        employees have a seamless experience.</p>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12"></div>
+            </div>
+        </section>
+        <section class="second" style="padding: 70px 10px;" id="second">
+            
+            <div class="five one my-5" data-aos="zoom-in" data-aos-duration="1000">
                 <h1>Why Choose Us
                     <span>Discover why ALTOS Technologies is the premier choice for IT solutions</span>
                 </h1>
@@ -355,7 +538,7 @@
 
             <!-- Card -->
             <div class="card-deck mx-2">
-                <div class="card">
+                <div class="card" data-aos="zoom-in-up" data-aos-duration="1000">
                     <div class="card-head">
                         <div class="card-img-top">
                             <h1><i class="bx bx-receipt"></i></h1>
@@ -371,7 +554,7 @@
                     </div>
 
                 </div>
-                <div class="card">
+                <div class="card" data-aos="zoom-in-up" data-aos-duration="1000">
 
                     <div class="card-head">
                         <div class="card-img-top">
@@ -387,7 +570,7 @@
                     </div>
 
                 </div>
-                <div class="card">
+                <div class="card" data-aos="zoom-in-up" data-aos-duration="1000">
                     <div class="card-head">
                         <div class="card-img-top">
                             <h1><i class="bx bx-cube-alt" aria-hidden="true"></i></h1>
@@ -404,7 +587,7 @@
                     </div>
 
                 </div>
-                <div class="card">
+                <div class="card" data-aos="zoom-in-up" data-aos-duration="1000">
                     <div class="card-head">
                         <div class="card-img-top">
                             <h1><i class="bx bx-user" aria-hidden="true"></i></h1>
@@ -423,25 +606,19 @@
 
 
         </section>
-        <section class="contact pt-5">
-            <div class="five two my-5">
+        <div class="banner">
+            <img class="img-fluid w-100"
+                src="https://a.storyblok.com/f/228452/838x176/fc794c4a7f/santa-gif.gif" alt="">
+        </div>
+        <section class="contact pb-5" id="contact">
+            <div class="five two my-5" data-aos="zoom-in" data-aos-duration="1000">
                 <h1>Contact Us <span>Connect with us</span></h1>
             </div>
-            <!-- <svg id="visual" viewBox="0 0 900 450" width="900" height="450" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
-                <g transform="translate(514.053280992917 205.93054105884664)">
-                    <path
-                        d="M116.6 -160.7C152.9 -134.2 185.4 -102.5 197.8 -64.3C210.2 -26.1 202.6 18.6 198.8 75.2C195 131.8 195.1 200.2 162.6 226.3C130.1 252.4 65 236.2 5 229.3C-55.1 222.4 -110.1 224.9 -160.7 204.7C-211.2 184.4 -257.3 141.5 -292.2 83.3C-327.1 25.2 -350.8 -48.3 -314.7 -84.6C-278.6 -120.9 -182.7 -120.2 -120.3 -138.3C-57.9 -156.3 -28.9 -193.2 5.6 -200.9C40.2 -208.6 80.3 -187.2 116.6 -160.7"
-                        fill="#531F1F">
-
-                    </path>
-                </g>
-            </svg>  style="background-image: url( static/image/contact.png ); background-repeat: no-repeat;">-->
-
-            <div class="contactform" >
+           
+            <div class="contactform" data-aos="fade-up" data-aos-duration="2000">
 
                 <div>
-                    <div class="wow fadeInUp" data-wow-delay="0.3s">
+                    <div>
                         <form>
                             <div class="row g-3">
                                 <div class="col-md-6">
@@ -483,8 +660,11 @@
 
 
         <div class="container-fluid  text-light footer mt-5 pt-5 wow fadeIn">
+            <!-- <div class="anim">
+                <img src="https://i.gifer.com/4XCO.gif" alt="" width="100" >
+            </div> -->
             <div class="container-footer py-5 px-lg-5">
-                <div class="row g-5">
+                <div class="row g-5" data-aos="fade-up" data-aos-duration="3000">
                     <div class="col-md-6 col-lg-3 foot1">
                         <h4 class="text-white mb-4">Get In Touch</h4>
                         <p><i class="fas fa-map-marker-alt"></i> 123 Street, New York, USA</p>
@@ -564,6 +744,7 @@
                 </div>
 
             </div>
+
             <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                 <path fill="#531F1F" fill-opacity="1"
                     d="M0,128L17.1,138.7C34.3,149,69,171,103,149.3C137.1,128,171,64,206,32C240,0,274,0,309,10.7C342.9,21,377,43,411,74.7C445.7,107,480,149,514,165.3C548.6,181,583,171,617,170.7C651.4,171,686,181,720,176C754.3,171,789,149,823,122.7C857.1,96,891,64,926,69.3C960,75,994,117,1029,112C1062.9,107,1097,53,1131,58.7C1165.7,64,1200,128,1234,176C1268.6,224,1303,256,1337,266.7C1371.4,277,1406,267,1423,261.3L1440,256L1440,320L1422.9,320C1405.7,320,1371,320,1337,320C1302.9,320,1269,320,1234,320C1200,320,1166,320,1131,320C1097.1,320,1063,320,1029,320C994.3,320,960,320,926,320C891.4,320,857,320,823,320C788.6,320,754,320,720,320C685.7,320,651,320,617,320C582.9,320,549,320,514,320C480,320,446,320,411,320C377.1,320,343,320,309,320C274.3,320,240,320,206,320C171.4,320,137,320,103,320C68.6,320,34,320,17,320L0,320Z">
@@ -576,7 +757,10 @@
 
     <!-- Link to page
 ================================================== -->
-
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
     <script>
 
@@ -596,58 +780,6 @@
                 });
             });
 
-
-            //Animation
-            var theme = '{{theme.name}}'
-            var imageElement = $('.image');
-            // $(document).ready(function () {
-            //     if(theme == 'onam'){
-
-            //     imageElement.attr('src', '{% static "image/on.png" %}');
-            //     var imagePath = "https://www.shutterstock.com/shutterstock/videos/1093895551/thumb/10.jpg?ip=x480";  // Replace with the actual path                    
-
-            //     }
-            //     else if(theme == 'christmas'){
-            //         imageElement.attr('src', '{% static "image/chr.png" %}');
-            //         var imagePath = "https://i.gifer.com/origin/43/43f778b8b7c6989f75f9075e4ea4a063_w200.gif"
-            //     }
-            //     else if(theme == 'eid'){
-            //         imageElement.attr('src', '{% static "image/eid.png" %}');
-            //         var imagePath = "https://img.freepik.com/free-vector/beautiful-holy-month-eid-mubarak-background_157027-1241.jpg?t=st=1697538518~exp=1697539118~hmac=457becd07bc20e7bb50fa8632de83ea6866dc329cd0a057aaa6ed356f9497c12"
-            //     }
-            //     else if(theme == 'notheme'){
-            //         $(".nav-link").css("color", "black");
-            //         $("body").css("background-color", "white");
-
-            //     }
-
-            //     $("body").css("background-image", "url(" + imagePath + ")");
-
-            // });
-
-            //Menu On Hover
-
-            $('body').on('mouseenter mouseleave', '.nav-item', function (e) {
-                if ($(window).width() > 750) {
-                    var _d = $(e.target).closest('.nav-item'); _d.addClass('show');
-                    setTimeout(function () {
-                        _d[_d.is(':hover') ? 'addClass' : 'removeClass']('show');
-                    }, 1);
-                }
-            });
-
-            //Switch light/dark
-
-            $("#switch").on('click', function () {
-                if ($("body").hasClass("dark")) {
-                    $("body").removeClass("dark");
-                    $("#switch").removeClass("switched");
-                }
-                else {
-                    $("body").addClass("dark");
-                    $("#switch").addClass("switched");
-                }
-            });
 
         })(jQuery); 
     </script>
@@ -683,10 +815,10 @@
 
                                 </li>
                                 <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                    <a class="nav-link" href="#banner">Explore</a>
+                                    <a class="nav-link" href="#explore">Explore</a>
                                 </li>
                                 <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                    <a class="nav-link" href="#footer">About</a>
+                                    <a class="nav-link" href="#about">About</a>
                                 </li>
 
                                 <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
@@ -720,45 +852,88 @@
         });
         //      
     </script>
-    <div class="celebration"><img class="image img-fluid" src="{% static 'image/maveli.gif' %}" alt="" width="150px">
+    <div class="celebration"><img class="image img-fluid" src="{% static 'image/maveli.gif' %}" alt="" width="150vw">
     </div>
 
     <div class="content-wrap my-5">
         <section class="top">
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-
-                        <img class="d-block w-100 img-fluid"
-                            src="https://t4.ftcdn.net/jpg/04/45/82/89/360_F_445828907_um4GERC0aNdtAp3JMgAJ136VmV2Q7p6Q.jpg"
-                            alt="First slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100 img-fluid"
-                            src="https://media.istockphoto.com/id/1206800961/photo/online-shopping-and-payment-man-using-tablet-with-shopping-cart-icon-digital-marketing.webp?b=1&s=170667a&w=0&k=20&c=RT5aV_p3DgMk16-QH26DmzNj_uHaq7hkKR0UapnHL2I="
-                            alt="Second slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100 img-fluid"
-                            src="https://www.lincad.co.uk/wp-content/uploads/2022/08/contact-us-scaled-1.jpg"
-                            alt="Third slide">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12"  data-aos="fade-right" data-aos-duration="2000">
+                    <div class="content ">
+                        <h1>We Deal With<br> The Aspects Of</h1>
+                        <h2>Professional IT Solutions</h2>
+                        <p>Elevate your business with Altos Technologies. As a software development company in India, we
+                            craft
+                            custom websites and software solutions to fit your unique business needs.</p>
                     </div>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+                <div class=" col-lg-6 col-md-12 col-sm-12"  data-aos="fade-left" data-aos-duration="2000">
+                    <div id="carouselExampleControls" class="carousel slide " data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+
+                                <img class="d-block w-100 img-fluid" src="{% static 'image/team-1.jpg' %}"
+                                    alt="First slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100 img-fluid" src="{% static 'image/team-2.jpg' %}"
+                                    alt="Second slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100 img-fluid" src="{% static 'image/team-3.jpg' %}"
+                                    alt="Third slide">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
+                            data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button"
+                            data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
         <div class="banner" id="banner">
             <img class="img-fluid" src="https://sssbalvikas.in/wp-content/uploads/2022/01/onam-banner.png" alt="">
         </div>
+        <section class="about" id="about" style="padding: 2rem 6rem;">
+            <div class="twelve">
+                <h1>About us</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12" data-aos="fade-right" data-aos-duration="2000">
+                    <p>As a leading web development company in Kochi, ALTOS Technologies provides top-notch consulting
+                        and strategy services to enhance the digital transformation of enterprises of all sizes, both
+                        internally and in terms of customer experience.</p>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12"></div>
+                <div class="col-lg-6 col-md-12 col-sm-12 text-right" data-aos="fade-left" data-aos-duration="2000">
+                    <p>Our expertise lies in website and software development, where we have gained extensive experience
+                        by delivering a wide range of projects, including websites, web applications, mobile
+                        applications, 3D modeling services, and digital marketing services, to clients across different
+                        industries and of varying sizes.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12" data-aos="fade-right" data-aos-duration="2000">
+                    <p>At ALTOS Technologies, we understand the critical role that user experience plays in the success
+                        of your website or software. That's why we put a strong emphasis on designing and developing
+                        products that are user-friendly, intuitive, and enjoyable to use, ensuring your customers or
+                        employees have a seamless experience.</p>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12"></div>
+            </div>
+        </section>
         <section class="sec2">
-           
+
             <div class="twelve ">
                 <h1>Why choose us</h1>
                 <p class="text-center">Discover why ALTOS Technologies is the premier choice for IT solutions</p>
@@ -767,7 +942,8 @@
             <div class="row">
                 <div class="col-sm-12 col-md-6 col-lg-3 mb-4">
                     <div class="card text-dark card-has-bg click-col"
-                        style="background-image:url('https://source.unsplash.com/600x900/?tech,street');">
+                        style="background-image:url('https://source.unsplash.com/600x900/?tech,street');"
+                        data-aos="zoom-in-up" data-aos-duration="1000">
                         <img class="card-img d-none" src="https://source.unsplash.com/600x900/?tech,street"
                             alt="Creative Manner Design Lorem Ipsum Sit Amet Consectetur dipisi?">
                         <div class="card-img-overlay d-flex flex-column">
@@ -794,7 +970,8 @@
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-3 mb-4">
                     <div class="card text-dark card-has-bg click-col"
-                        style="background-image:url('https://source.unsplash.com/600x900/?tree,nature');">
+                        style="background-image:url('https://source.unsplash.com/600x900/?tree,nature');"
+                        data-aos="zoom-in-up" data-aos-duration="1000">
                         <img class="card-img d-none" src="https://source.unsplash.com/600x900/?tree,nature"
                             alt="Creative Manner Design Lorem Ipsum Sit Amet Consectetur dipisi?">
                         <div class="card-img-overlay d-flex flex-column">
@@ -820,7 +997,8 @@
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-3 mb-4">
                     <div class="card text-dark card-has-bg click-col"
-                        style="background-image:url('https://source.unsplash.com/600x900/?computer,design');">
+                        style="background-image:url('https://source.unsplash.com/600x900/?computer,design');"
+                        data-aos="zoom-in-up" data-aos-duration="1000">
                         <img class="card-img d-none" src="https://source.unsplash.com/600x900/?computer,design"
                             alt="Creative Manner Design Lorem Ipsum Sit Amet Consectetur dipisi?">
                         <div class="card-img-overlay d-flex flex-column">
@@ -847,7 +1025,8 @@
 
                 <div class="col-sm-12 col-md-6 col-lg-3 mb-4">
                     <div class="card text-dark card-has-bg click-col"
-                        style="background-image:url('https://source.unsplash.com/600x900/?tech,street');">
+                        style="background-image:url('https://source.unsplash.com/600x900/?tech,street');"
+                        data-aos="zoom-in-up" data-aos-duration="1000">
                         <img class="card-img d-none" src="https://source.unsplash.com/600x900/?tech,street"
                             alt=" Lorem Ipsum Sit Amet Consectetur dipisi?">
                         <div class="card-img-overlay d-flex flex-column">
@@ -878,6 +1057,9 @@
             </div>
 
         </section>
+        <div class="banner" id="banner">
+            <img class="img-fluid" src="https://sssbalvikas.in/wp-content/uploads/2022/01/onam-banner.png" alt="">
+        </div>
         <section id="contact">
 
             <div class="twelve">
@@ -887,94 +1069,89 @@
             <div class="contact-wrapper row">
 
                 <!-- Left contact page -->
-            <div class="col-sm-12 col-md-12 col-lg-6">
-                <form id="contact-form" class="form-horizontal" role="form">
+                <div class="col-sm-12 col-md-12 col-lg-6 left" data-aos="fade-right" data-aos-easing="ease-in-sine">
+                    <form id="contact-form" class="form-horizontal" role="form">
 
-                    <div class="form-group">
-                        <div class="col-sm-12">
-                            <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value=""
-                                required>
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" id="name" placeholder="NAME" name="name"
+                                    value="" required>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="form-group">
-                        <div class="col-sm-12">
-                            <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email"
-                                value="" required>
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email"
+                                    value="" required>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-12">
-                            <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message"
-                                required></textarea>
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message"
+                                    required></textarea>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-10">
-                            <button class="btn send-button w-100" id="submit" type="submit" value="SEND">
-                                <div class="alt-send-button">
-                                    <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
-                                </div>
+                        <div class="form-group">
+                            <div class="col-sm-10">
+                                <button class="btn send-button w-100" id="submit" type="submit" value="SEND">
+                                    <div class="alt-send-button">
+                                        <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+                                    </div>
 
-                            </button>
+                                </button>
+                            </div>
                         </div>
-                    </div>
 
 
 
-                </form>
-            </div>
+                    </form>
+                </div>
 
                 <!-- Left contact page -->
-<div class="col-sm-12 col-md-12 col-lg-6">
-                <div class="direct-contact-container">
+                <div class="col-sm-12 col-md-12 col-lg-6 right" data-aos="fade-left" data-aos-easing="ease-in-sine">
+                    <div class="direct-contact-container">
 
-                    <ul class="contact-list">
-                        <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">City,
-                                    State</span></i></li>
+                        <ul class="contact-list">
+                            <li class="list-item"><i class="fa fa-map-marker fa-2x"><span
+                                        class="contact-text place">City,
+                                        State</span></i></li>
 
-                        <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a
-                                        href="tel:1-212-555-5555" title="Give me a call">(212) 555-2368</a></span></i>
-                        </li>
+                            <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a
+                                            href="tel:1-212-555-5555" title="Give me a call">(212)
+                                            555-2368</a></span></i>
+                            </li>
 
-                        <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a
-                                        href="mailto:#" title="Send me an email">hitmeup@gmail.com</a></span></i></li>
+                            <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a
+                                            href="mailto:#" title="Send me an email">hitmeup@gmail.com</a></span></i>
+                            </li>
 
-                    </ul>
+                        </ul>
 
-                    <hr>
-                    <ul class="social-media-list">
-                        <li><a href="#" target="_blank" class="contact-icon">
-                                <i class="fa fa-github" aria-hidden="true"></i></a>
-                        </li>
-                        <li><a href="#" target="_blank" class="contact-icon">
-                                <i class="fa fa-codepen" aria-hidden="true"></i></a>
-                        </li>
-                        <li><a href="#" target="_blank" class="contact-icon">
-                                <i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        </li>
-                        <li><a href="#" target="_blank" class="contact-icon">
-                                <i class="fa fa-instagram" aria-hidden="true"></i></a>
-                        </li>
-                    </ul>
-                    <hr>
+                        <hr>
+                        <ul class="social-media-list">
+                            <li><a href="#" target="_blank" class="contact-icon">
+                                    <i class="fa fa-github" aria-hidden="true"></i></a>
+                            </li>
+                            <li><a href="#" target="_blank" class="contact-icon">
+                                    <i class="fa fa-codepen" aria-hidden="true"></i></a>
+                            </li>
+                            <li><a href="#" target="_blank" class="contact-icon">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            </li>
+                            <li><a href="#" target="_blank" class="contact-icon">
+                                    <i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            </li>
+                        </ul>
+                        <hr>
 
-                    <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
+                        <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
 
+                    </div>
                 </div>
-            </div>
             </div>
 
         </section>
-        <script>
-            document.querySelector('#contact-form').addEventListener('submit', (e) => {
-                e.preventDefault();
-                e.target.elements.name.value = '';
-                e.target.elements.email.value = '';
-                e.target.elements.message.value = '';
-            });
 
-        </script>
 
         <!-- <section class="contact">
         <div class="twelve">
@@ -1019,7 +1196,7 @@
        </section> -->
         <div class="container-fluid  text-light footer mt-5 pt-5 wow fadeIn" id="footer">
             <div class="container-footer py-5 px-lg-5">
-                <div class="row g-5">
+                <div class="row g-5" data-aos="fade-up" data-aos-duration="3000">
                     <div class="col-md-6 col-lg-3 foot1">
                         <h4 class="text-white mb-4">Get In Touch</h4>
                         <p><i class="fas fa-map-marker-alt"></i> 123 Street, New York, USA</p>
@@ -1103,7 +1280,10 @@
         </div>
 
     </div>
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 {% endif %}
 
