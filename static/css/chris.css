@@ -67,7 +67,9 @@
     text-align: justify;
     text-justify: inter-word;
 }
-
+/* .hero-anime .five{
+    margin: 0;
+} */
 
 .hero-anime .five h1 {
     position: relative;
@@ -76,7 +78,7 @@
     font-family: "Raleway", sans-serif;
     color: #080808;
     text-align: center;
-    font-size: 2em;
+    font-size: 3vw;
     font-weight: 700;
     color: #202020;
     text-transform: uppercase;
@@ -99,25 +101,25 @@
     word-spacing: 1px;
 }
 
-.hero-anime  .five h1:before {
+.hero-anime .five h1:before {
     position: absolute;
-    left: 0;
-    bottom: 47px;
-    width: 80px;
-    height: 4px;
+    /* left: 0; */
+    bottom: 8vh;
+    width: 2em;
+    height: 0.5vh;
     content: "";
-    left: 50%;
-    margin-left: -30px;
+    left: 45%;
+    /* margin-left: -30px; */
     background-color: #000000;
 }
 .hero-anime .five h1 {
     position: relative;
-    margin: 5rem auto;
+    /* margin: 5rem auto; */
   }
  
   .hero-anime .one  h1::after {
     top: -85%;
-    left: 48%;
+    left: 45%;
   }
   .hero-anime .two  h1::after {
     top: -85%;
@@ -131,8 +133,8 @@
     align-items: center;
     justify-content: center;
     
-    width: 80px; /* Set the width of your image */
-    height: 80px; /* Set the height of your image */
+    width: 6vw; /* Set the width of your image */
+    height: 6vw; /* Set the height of your image */
     background-image: url('https://freepngimg.com/thumb/santa_claus/13-2-santa-claus-png-hd-thumb.png'); /* Replace with your image path */
     background-size: cover;
     background-repeat: no-repeat;
@@ -165,7 +167,7 @@
     /* padding: 3rem 4rem; */
     /* height: 90vh; */
     position: relative;
-    margin-bottom: 25vw;
+    /* margin-bottom: 25vw; */
     /* background: url('https://i.pinimg.com/1200x/42/71/5c/42715c20bde912746f0d37449c700b1d.jpg');
 background-repeat: no-repeat;
 background-size: 100%; */
@@ -180,7 +182,7 @@ background-size: 100%; */
     border-radius: 1rem;
     /* position: relative; */
     height: 500px;
-    margin: 4rem auto;
+    margin:  auto;
     padding: 3rem;
     display: flex;
     width: 60vw;
@@ -199,7 +201,7 @@ background-size: 100%; */
     color: rgb(0, 0, 0);
 }
 .wow{
-    margin: -0.5rem 0;
+    /* margin: -0.5rem 0; */
 }
 .hero-anime .form-control{
     background-color: rgba(255, 255, 255, 0.541);
